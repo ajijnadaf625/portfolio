@@ -583,7 +583,7 @@ const styles = {
     fontFamily: "'Outfit', sans-serif"
   },
   matchCard: {
-    backgroundColor: `${accentColor}, 0.05)`,
+    backgroundColor: 'rgba(0, 255, 108, 0.05)',
     border: '1px solid rgba(0, 255, 108, 0.25)',
     borderRadius: '8px',
     padding: '10px',
