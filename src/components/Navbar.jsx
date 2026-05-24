@@ -280,7 +280,7 @@ const styles = {
     display: 'flex',
     gap: '20px',
     marginTop: '8px',
-    borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+    borderTop: '1px solid var(--border-color)',
     paddingTop: '16px'
   }
 };

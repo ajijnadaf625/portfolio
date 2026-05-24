@@ -211,7 +211,7 @@ export default function RandomForest3D() {
           ctx.strokeStyle = `${primaryColor}, 0.7)`;
           ctx.lineWidth = 3;
         } else {
-          ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+          ctx.strokeStyle = isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)';
           ctx.lineWidth = 1.5;
         }
         ctx.stroke();
@@ -237,7 +237,7 @@ export default function RandomForest3D() {
         ctx.shadowColor = ctx.fillStyle;
         ctx.shadowBlur = 15;
       } else {
-        ctx.fillStyle = '#10162a';
+        ctx.fillStyle = isLight ? '#e2e8f0' : '#10162a';
         ctx.strokeStyle = 'hsl(var(--text-muted))';
         ctx.lineWidth = 1;
         ctx.shadowBlur = 0;
@@ -263,7 +263,7 @@ export default function RandomForest3D() {
 
       // Add label next to nodes
       if (node.feature) {
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+        ctx.fillStyle = isLight ? 'rgba(0, 0, 0, 0.4)' : 'rgba(255, 255, 255, 0.4)';
         ctx.font = '9px sans-serif';
         ctx.fillText(node.feature, node.px, node.py - scaledSize - 8);
       } else {
@@ -469,7 +469,7 @@ const styles = {
   },
   tab: {
     backgroundColor: 'var(--progress-track)',
-    border: '1px solid rgba(255,255,255,0.1)',
+    border: '1px solid var(--border-color)',
     borderRadius: '12px',
     padding: '4px 10px',
     color: 'hsl(var(--text-secondary))',
@@ -537,7 +537,7 @@ const styles = {
     WebkitAppearance: 'none',
     height: '4px',
     borderRadius: '2px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'var(--progress-track)',
     outline: 'none',
     cursor: 'pointer',
     accentColor: 'hsl(var(--primary))'
@@ -602,7 +602,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: 'rgba(255,255,255,0.02)',
+    backgroundColor: 'var(--progress-track)',
     border: '1px solid rgba(255,255,255,0.04)',
     borderRadius: '4px',
     padding: '4px',
@@ -620,7 +620,7 @@ const styles = {
   },
   pinkTextGlow: {
     color: '#ff528c',
-    textShadow: '0 0 10px rgba(255, 82, 140, 0.4)'
+    textShadow: '0 0 10px rgba(255, 82, 140, 0.2)'
   },
   greenTextGlow: {
     color: 'hsl(var(--accent))',

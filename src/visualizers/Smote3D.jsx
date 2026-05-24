@@ -208,7 +208,7 @@ export default function Smote3D() {
     ctx.clearRect(0, 0, width, height);
 
     // Draw coordinate boundaries
-    const drawLine3D = (x1, y1, z1, x2, y2, z2, color = isLight ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255,255,255,0.04)') => {
+    const drawLine3D = (x1, y1, z1, x2, y2, z2, color = isLight ? 'rgba(0, 0, 0, 0.06)' : 'var(--border-color)') => {
       let r1_1 = rotateY3D(x1, y1, z1, angleY);
       let r1_2 = rotateX3D(r1_1.x, r1_1.y, r1_1.z, angleX);
       let p1 = project(r1_2.x, r1_2.y, r1_2.z);

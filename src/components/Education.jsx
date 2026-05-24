@@ -111,7 +111,7 @@ const styles = {
   section: {
     padding: '80px 0',
     backgroundColor: 'hsl(var(--bg-deep))',
-    borderTop: '1px solid rgba(255, 255, 255, 0.02)'
+    borderTop: '1px solid var(--border-color)'
   },
   academicsCol: {
     display: 'flex',

@@ -364,7 +364,7 @@ const styles = {
     top: '12px',
     left: '12px',
     backgroundColor: 'rgba(5, 8, 20, 0.75)',
-    border: '1px solid rgba(255,255,255,0.1)',
+    border: '1px solid var(--border-color)',
     borderRadius: '16px',
     padding: '4px 12px',
     fontSize: '11px',
@@ -472,7 +472,7 @@ const styles = {
     fontFamily: "'Outfit', sans-serif"
   },
   learningCurveBox: {
-    backgroundColor: 'rgba(255,255,255,0.02)',
+    backgroundColor: 'var(--progress-track)',
     border: '1px solid rgba(255,255,255,0.04)',
     borderRadius: '8px',
     padding: '10px',

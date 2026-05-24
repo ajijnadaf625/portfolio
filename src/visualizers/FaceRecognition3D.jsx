@@ -213,7 +213,7 @@ export default function FaceRecognition3D() {
     });
 
     // Draw Face Mesh wireframe edges
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.strokeStyle = isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)';
     ctx.lineWidth = 1;
     faceEdges.forEach(edge => {
       const vStart = projectedVertices[edge[0]];
@@ -238,7 +238,7 @@ export default function FaceRecognition3D() {
         ctx.strokeStyle = `${primaryColor}, 0.25)`;
         ctx.lineWidth = 1;
       } else {
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.strokeStyle = isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)';
         ctx.lineWidth = 1;
         ctx.shadowBlur = 0;
       }
@@ -261,7 +261,7 @@ export default function FaceRecognition3D() {
         ctx.shadowColor = 'hsl(var(--primary))';
         ctx.shadowBlur = 8;
       } else {
-        ctx.fillStyle = '#10162a';
+        ctx.fillStyle = isLight ? '#e2e8f0' : '#10162a';
         ctx.shadowBlur = 0;
       }
       ctx.fill();
@@ -309,12 +309,12 @@ export default function FaceRecognition3D() {
         ctx.shadowColor = 'hsl(var(--accent))';
         ctx.shadowBlur = 18;
       } else if (isSearching) {
-        ctx.fillStyle = Math.random() > 0.5 ? 'hsl(var(--primary))' : '#10162a';
+        ctx.fillStyle = Math.random() > 0.5 ? 'hsl(var(--primary))' : isLight ? '#e2e8f0' : '#10162a';
         ctx.strokeStyle = 'rgba(0,240,255,0.4)';
         ctx.lineWidth = 1;
         ctx.shadowBlur = 5;
       } else {
-        ctx.fillStyle = '#0b0f19';
+        ctx.fillStyle = isLight ? '#f1f5f9' : '#0b0f19';
         ctx.strokeStyle = 'var(--border-color)';
         ctx.lineWidth = 1;
         ctx.shadowBlur = 0;

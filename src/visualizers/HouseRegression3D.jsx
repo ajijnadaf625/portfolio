@@ -420,7 +420,7 @@ const styles = {
     WebkitAppearance: 'none',
     height: '4px',
     borderRadius: '2px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'var(--progress-track)',
     outline: 'none',
     cursor: 'pointer',
     accentColor: 'hsl(var(--primary))'

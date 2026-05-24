@@ -275,7 +275,7 @@ const styles = {
   section: {
     padding: '80px 0',
     backgroundColor: 'hsl(var(--bg-deep))',
-    borderTop: '1px solid rgba(255, 255, 255, 0.02)'
+    borderTop: '1px solid var(--border-color)'
   },
   projectsGrid: {
     display: 'grid',
@@ -357,7 +357,7 @@ const styles = {
     WebkitAppearance: 'none',
     height: '4px',
     borderRadius: '2px',
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'var(--border-color)',
     outline: 'none',
     cursor: 'pointer',
     accentColor: '#00f0ff'
@@ -390,7 +390,7 @@ const styles = {
   },
   widgetBtn: {
     backgroundColor: 'rgba(var(--card-bg), 0.1)',
-    border: '1px solid rgba(255,255,255,0.1)',
+    border: '1px solid var(--border-color)',
     color: 'hsl(var(--text-primary))',
     borderRadius: '20px',
     padding: '8px 16px',
